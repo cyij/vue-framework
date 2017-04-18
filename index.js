@@ -1,5 +1,5 @@
 import GEvent from './src/libs/gevent'
-import Http from './src/libs/gevent'
+import Http from './src/libs/http'
 import AppPlugin from './src/plugins/app'
 import PagePlugin from './src/plugins/page'
 import Navbar from './src/components/navbar'

@@ -7,6 +7,7 @@ const plugin = {
   install (Vue, options) {
     options = options || {}
     Vue.$app = Util.extend(Vue.$app, options) 
+    window.$app = options
     Vue.$app.http = Http
     Vue.$app.util = Util
     if (typeof Vue.$app.gevent === 'undefined') {

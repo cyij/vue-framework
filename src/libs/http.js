@@ -1,13 +1,12 @@
 import Util from './util'
-import Vue from 'Vue'
 
 var appAjax = function (context, url, params, success, error, options) {
   params = params || {}
   if (typeof params.__ob__ !== 'undefined') {
     params = Util.extend({}, params)
   }
-  if (url.indexOf('http') < 0 && Vex.$app && Vex.$app.apiUrl) {
-    url = Vex.$app.apiUrl + url
+  if (url.indexOf('http') < 0 && window.$app && window.$app.apiUrl) {
+    url = window.$app.apiUrl + url
     if (context && context.$store && context.$store.state.login && context.$store.state.login.requestKeys) {
       let requestKeys = context.$store.state.login.requestKeys
       if (requestKeys) {

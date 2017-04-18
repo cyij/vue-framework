@@ -2,7 +2,7 @@ import PageManager from './manage'
 import GEvent from '../../libs/gevent'
 
 const plugin = {
-  install (Vue, store) {
+  install (Vue, {PageConfigs, store}) {
     PageManager.init(Vue, PageConfigs, store)
     Vue.$app = Vue.$app || {}
     Vue.$app.pm = PageManager
