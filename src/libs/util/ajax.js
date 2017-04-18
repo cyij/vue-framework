@@ -24,7 +24,7 @@ var ajax = function (options) {
         processData: true,
         dataType: 'text',
         contentType: 'application/x-www-form-urlencoded',
-        timeout: 0
+        timeout: 10000
     };
     var callbacks = ['beforeSend', 'error', 'complete', 'success', 'statusCode'];
 
