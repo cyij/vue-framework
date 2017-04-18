@@ -4,8 +4,9 @@ import GEvent from '../libs/gevent'
 import Validator from '../libs/util/validate'
 
 const plugin = {
-  install (Vue) {
-    Vue.$app = Vue.$app || {}
+  install (Vue, options) {
+    options = options || {}
+    Vue.$app = Util.extend(Vue.$app, options) 
     Vue.$app.http = Http
     Vue.$app.util = Util
     if (typeof Vue.$app.gevent === 'undefined') {
